@@ -162,7 +162,7 @@ def main():
         st.markdown("### 📋 処理フロー")
         st.markdown("""
         1. Excelファイルをアップロード
-        2. 各シートに**CustProg**列を追加
+        2. 各シートに**CustProg**列を追加、シート名を記入
         3. 全シートを立て積み
         4. Markdownファイルに変換
         5. 自然言語指示と共にGeminiに送信
@@ -211,7 +211,7 @@ def main():
         if api_key and 'markdown_content' in st.session_state:
             user_instruction = st.text_area(
                 "分析指示を入力してください",
-                placeholder="例：各CustProgの売上合計を計算し、最も売上の高いプログラムを教えてください",
+                placeholder="例：周波数が3.5GHz以上のMacroを教えてください",
                 height=120,
                 help="Markdownデータに対する分析を自然言語で指示してください"
             )
